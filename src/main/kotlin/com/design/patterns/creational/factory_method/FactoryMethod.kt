@@ -7,13 +7,9 @@ import com.design.patterns.creational.factory_method.factory.WindowsDialog
 
 class FactoryMethod(var buttonType:String){
     private lateinit var dialog: Dialog
-    fun perform():String{
-        return configure()
-    }
-    private fun configure():String{
+    fun create(): Button {
         dialog = if (buttonType == "windows") WindowsDialog()
         else HtmlDialog()
-        val button: Button = dialog.createButton()
-        return button.render()
+        return dialog.createButton()
     }
 }
