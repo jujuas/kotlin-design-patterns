@@ -1,4 +1,4 @@
-package com.design.patterns.creational.prototype.shapes
+package com.design.patterns.creational.prototype
 
 class Circle(override var x: Int, override var y: Int, override var color: Int,var radius:Int = 0): ShapePrototype() {
 
